@@ -1,0 +1,148 @@
+import React, { useEffect, useState } from 'react';
+import { Calendar, MapPin, Building } from 'lucide-react';
+
+interface WorkExperience {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  responsibilities: string[];
+}
+
+const Experience: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = document.getElementById('experience');
+    if (section) observer.observe(section);
+
+    return () => {
+      if (section) observer.unobserve(section);
+    };
+  }, []);
+
+  const experiences: WorkExperience[] = [
+     {
+      title: 'Student Assistant Intern',
+      company: 'New York State Office of Information Technology Services',
+      location: 'Albany, New York',
+      period: 'May 2025 - Present',
+      responsibilities: [
+        'Developed and maintained internal tools using Python, SQL, and Power BI, enhancing data management and reporting efficiency.',
+        'Automated data entry processes, reducing manual effort by 40% and improving data accuracy.',
+        'Collaborated with cross-functional teams to gather requirements and deliver tailored solutions.'
+      ]
+    
+    },
+    {
+      title: 'Graduate Research Assistant',
+      company: 'UX & Immersive Technologies Lab, University at Albany - SUNY',
+      location: 'New York, USA',
+      period: 'Aug 2024 - May 2025',
+      responsibilities: [
+        'Mastered Unity\'s tools and features for VR development, enhancing the lab\'s project outputs.',
+        'Collaborated effectively with interdisciplinary teams to bridge UX research and VR development.'
+      ]
+    },
+    {
+      title: 'Graduate Student Assistant',
+      company: 'University Libraries at the University at Albany – SUNY',
+      location: 'Albany, New York',
+      period: 'Feb 2024 – Present',
+      responsibilities: [
+        'Managed and optimized data entry processes, enhancing administrative efficiency and data accuracy by 30%.',
+        'Supervised 10+ undergraduate students, delegating tasks effectively while honing organizational and multitasking skills, increasing team productivity.',
+        'Analyzed library usage data to streamline services, while providing strong customer service and problem-solving assistance to diverse library users, boosting user satisfaction by 25%.'
+      ]
+    },
+    {
+      title: 'Assistant General Manager',
+      company: 'Sree Krishna Vilas',
+      location: 'Hyderabad, India',
+      period: 'May 2021 – Dec 2023',
+      responsibilities: [
+        'Spearheaded the implementation and integration of CRM and POS systems, improving operational efficiency by 15% and reducing service costs by 5%.',
+        'Engineered custom reports and dashboards using SQL and Power BI to monitor and assess sales trends, leading to data-driven decision-making and improving productivity by 15%.',
+        'Oversaw a team of 20 staff, enhancing team productivity through process automation, software training, and effective task delegation using project management tools.',
+        'Implemented an advanced inventory management system, leveraging data-driven insights to optimize procurement, reducing stockouts by 30% and minimizing inventory holding costs.',
+        'Provided data-driven solutions to clients, increasing customer satisfaction score by 20% over 6 months.'
+      ]
+    }
+  ];
+
+  return (
+    <section id="experience" className="py-20 bg-secondary-50 dark:bg-secondary-900">
+      <div className="section-container">
+        <h2 className="section-title mb-16">Work Experience</h2>
+        
+        <div className="max-w-3xl mx-auto">
+          {experiences.map((exp, index) => (
+            <div 
+              key={index}
+              className={`timeline-item ${
+                isVisible 
+                  ? 'opacity-100' 
+                  : 'opacity-0'
+              }`}
+              style={{ transitionDelay: `${index * 200}ms`, transition: 'opacity 0.6s ease-in-out' }}
+            >
+              <div className="timeline-dot"></div>
+              
+              <div className="pl-4">
+                <div className="card p-6">
+                  <h3 className="text-xl font-semibold text-primary-700 dark:text-primary-300">
+                    {exp.title}
+                  </h3>
+                  
+                  <div className="flex flex-col sm:flex-row sm:items-center text-secondary-600 dark:text-secondary-400 mt-1 mb-4">
+                    <div className="flex items-center mr-4">
+                      <Building className="h-4 w-4 mr-1" />
+                      <span>{exp.company}</span>
+                    </div>
+                    <div className="flex items-center mr-4">
+                      <MapPin className="h-4 w-4 mr-1" />
+                      <span>{exp.location}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Calendar className="h-4 w-4 mr-1" />
+                      <span>{exp.period}</span>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-2 mt-4">
+                    {exp.responsibilities.map((item, i) => (
+                      <li key={i} className="flex">
+                        <span className="mr-2 text-primary-600 dark:text-accent-400">•</span>
+                        <span className="text-secondary-700 dark:text-secondary-300">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <a 
+            href="#contact" 
+            className="btn btn-outline inline-block mt-8"
+          >
+            Let's Work Together
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Experience;

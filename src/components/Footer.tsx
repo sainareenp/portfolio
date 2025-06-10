@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
               <a
-                href="https://www.linkedin.com/in/sai-nareen-purimtla/"
+                href="https://www.linkedin.com/in/sai-nareen-purimetla/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-white dark:bg-secondary-800 text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-accent-400 transition-colors"
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com/sainareenp/onlinemarketplace"
+                href="https://github.com/sainareenp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-white dark:bg-secondary-800 text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-accent-400 transition-colors"

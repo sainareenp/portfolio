@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Calendar } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Project {
@@ -20,8 +20,8 @@ const Projects: React.FC = () => {
         'Built a modern personal portfolio with React and Next.js showcasing featured projects and contact integrations. Integrated smooth animations, responsive design, dark mode, and optimized performance for SEO and accessibility.',
       technologies: ['Next.js', 'React', 'Tailwind CSS'],
       image:
-        'https://images.pexels.com/photos/6169659/pexels-photo-6169659.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-      github: 'https://github.com/sainareenp/onlinemarketplace',
+        'https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      github: 'https://github.com/sainareenp/sai-nareen-portfolio',
     },
     {
       title: 'ETL Pipeline',
@@ -29,21 +29,21 @@ const Projects: React.FC = () => {
         'Designed and developed a lightweight ETL pipeline to simulate a real-world data flow. It extracts 1000 rows of fake sales data using Faker, transforms the data (date formatting, revenue calculations, categorization), loads it into a SQLite database, and outputs insights via Excel reports. Included sales trends, top products, and regional distribution.',
       technologies: ['Python', 'SQLite', 'Pandas', 'OpenPyXL'],
       image:
-        'https://images.pexels.com/photos/8728556/pexels-photo-8728556.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-      github: 'https://github.com/yourusername/mini-etl-pipeline',
+        'https://thumbs.dreamstime.com/b/etl-process-extract-transform-load-to-extract-data-different-sources-transform-data-load-to-user-etl-302594391.jpg',
+      github: 'https://github.com/sainareenp/mini-etl-pipeline',
     },
       {
-      title: 'Secure Online Marketplace Web Application',
-      description: 'Developed a secure online marketplace platform with facial recognition, two-factor authentication, and AI-powered fraud detection, enhancing user trust and transaction security. Built responsive user interfaces using React and Next.js, implemented protected routes via middleware, and collaborated on backend APIs for task management and image uploads, improving system reliability and scalability.',
+      title: 'Online Marketplace Web Application',
+      description: 'Developed an online marketplace platform with facial recognition, two-factor authentication, and AI-powered fraud detection, enhancing user trust and transaction security. Built responsive user interfaces using React and Next.js, implemented protected routes via middleware, and collaborated on backend APIs for task management and image uploads, improving system reliability and scalability.',
       technologies: ['Next.js', 'React', 'Node.js', 'Firebase'],
-      image: 'https://images.pexels.com/photos/6169659/pexels-photo-6169659.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      image: 'https://miro.medium.com/max/1200/1*Grifgcst7t_E9eRsX0Myuw.png',
       github: 'https://github.com/sainareenp/onlinemarketplace'
     },
     {
       title: 'Automated Industrial Line Tracer Vehicle',
       description: 'Developed a software-controlled autonomous vehicle with line tracing capabilities using Python for embedded systems, optimizing control processes and improving operational efficiency by 20%. Integrated a robotic arm to perform automated object manipulation tasks (picking and placing), and utilized Power BI for performance data visualization, enhancing precision and operational efficiency in industrial automation.',
       technologies: ['Python', 'Power BI', 'Embedded systems'],
-      image: 'https://images.pexels.com/photos/8728556/pexels-photo-8728556.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      image: 'https://img.freepik.com/premium-vector/electric-vehicles-production-line-isometric-illustration-with-automated-remote-controlled-robotic-arms-assembly-conveyor-system_1284-56880.jpg?w=996',
     },
     {
       title: 'Electric Solar Vehicle Development',
@@ -94,7 +94,7 @@ const Projects: React.FC = () => {
                   <img
                     src={selectedProject.image}
                     alt={selectedProject.title}
-                    className="w-full h-64 object-cover rounded-xl"
+                    className="w-full h-60 object-cover rounded-xl"
                   />
                 </div>
 

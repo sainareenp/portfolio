@@ -17,6 +17,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
     { name: 'Skills', href: '#skills', section: 'skills' },
     { name: 'Experience', href: '#experience', section: 'experience' },
     { name: 'Projects', href: '#projects', section: 'projects' },
+    { name: 'Education', href: '#Education', section: 'Education' },
     { name: 'Contact', href: '#contact', section: 'contact' },
   ];
 

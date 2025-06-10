@@ -17,7 +17,6 @@ const Footer: React.FC = () => {
               Information Science & Technology Professional
             </p>
           </div>
-          
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
               <a

@@ -32,7 +32,7 @@ const Experience: React.FC = () => {
 
   const experiences: WorkExperience[] = [
      {
-      title: 'Student Assistant Intern',
+      title: 'Student Assistant - Intern',
       company: 'New York State Office of Information Technology Services',
       location: 'Albany, New York',
       period: 'May 2025 - Present',
@@ -43,19 +43,10 @@ const Experience: React.FC = () => {
       ]
     
     },
-    {
-      title: 'Graduate Research Assistant',
-      company: 'UX & Immersive Technologies Lab, University at Albany - SUNY',
-      location: 'New York, USA',
-      period: 'Aug 2024 - May 2025',
-      responsibilities: [
-        'Mastered Unity\'s tools and features for VR development, enhancing the lab\'s project outputs.',
-        'Collaborated effectively with interdisciplinary teams to bridge UX research and VR development.'
-      ]
-    },
+    
     {
       title: 'Graduate Student Assistant',
-      company: 'University Libraries at the University at Albany – SUNY',
+      company: 'State of New York - University Libraries at University at Albany - SUNY',
       location: 'Albany, New York',
       period: 'Feb 2024 – Present',
       responsibilities: [
@@ -65,10 +56,20 @@ const Experience: React.FC = () => {
       ]
     },
     {
+      title: 'Graduate Research Assistant',
+      company: 'UX & Immersive Technologies Lab, University at Albany - SUNY',
+      location: 'Albany, New York',
+      period: 'Aug 2024 - May 2025',
+      responsibilities: [
+        'Mastered Unity\'s tools and features for VR development, enhancing the lab\'s project outputs.',
+        'Collaborated effectively with interdisciplinary teams to bridge UX research and VR development.'
+      ]
+    },
+    {
       title: 'Assistant General Manager',
       company: 'Sree Krishna Vilas',
       location: 'Hyderabad, India',
-      period: 'May 2021 – Dec 2023',
+      period: 'May 2022 – Dec 2023',
       responsibilities: [
         'Spearheaded the implementation and integration of CRM and POS systems, improving operational efficiency by 15% and reducing service costs by 5%.',
         'Engineered custom reports and dashboards using SQL and Power BI to monitor and assess sales trends, leading to data-driven decision-making and improving productivity by 15%.',
@@ -99,30 +100,30 @@ const Experience: React.FC = () => {
               
               <div className="pl-4">
                 <div className="card p-6">
-                  <h3 className="text-xl font-semibold text-primary-700 dark:text-primary-300">
+                  <h3 className="text-xl font-bold text-primary-700 dark:text-primary-300">
                     {exp.title}
                   </h3>
-                  
-                  <div className="flex flex-col sm:flex-row sm:items-center text-secondary-600 dark:text-secondary-400 mt-1 mb-4">
-                    <div className="flex items-center mr-4">
+                  <div className="text-secondary-600 dark:text-secondary-400 mt-1 mb-4">
+                    <div className="flex items-center mb-1">
                       <Building className="h-4 w-4 mr-1" />
-                      <span>{exp.company}</span>
+                      <span className="font-semibold text-secondary-800 dark:text-secondary-100">{exp.company}</span>
                     </div>
-                    <div className="flex items-center mr-4">
-                      <MapPin className="h-4 w-4 mr-1" />
-                      <span>{exp.location}</span>
+                    <div className="flex flex-wrap items-center gap-x-6">
+                      <div className="flex items-center">
+                        <MapPin className="h-4 w-4 mr-1" />
+                        <span>{exp.location}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        <span>{exp.period}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      <span>{exp.period}</span>
-                    </div>
-                  </div>
-                  
+                  </div>            
                   <ul className="space-y-2 mt-4">
                     {exp.responsibilities.map((item, i) => (
                       <li key={i} className="flex">
                         <span className="mr-2 text-primary-600 dark:text-accent-400">•</span>
-                        <span className="text-secondary-700 dark:text-secondary-300">{item}</span>
+                        <span className="text-secondary-800 dark:text-secondary-200">{item}</span>
                       </li>
                     ))}
                   </ul>

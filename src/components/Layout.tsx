@@ -5,16 +5,17 @@ import About from './About';
 import Skills from './Skills';
 import Experience from './Experience';
 import Projects from './Projects';
+import Education from './Education';
 import Contact from './Contact';
 import Footer from './Footer';
-import Education from './Education';
+
 
 const Layout: React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero');
   
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'skills', 'experience', 'projects', 'contact'];
+      const sections = ['hero', 'about', 'skills', 'experience', 'projects','Education', 'contact'];
       
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -42,8 +43,8 @@ const Layout: React.FC = () => {
         <About />
         <Skills />
         <Experience />
-        <Education />
         <Projects />
+        <Education />
         <Contact />
       </main>
       <Footer />

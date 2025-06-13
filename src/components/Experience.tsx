@@ -70,7 +70,7 @@ const Experience: React.FC = () => {
       title: 'Assistant General Manager',
       company: 'Sree Krishna Vilas',
       location: 'Hyderabad, India',
-      period: 'May 2022 – Dec 2023',
+      period: 'May 2021 – Dec 2023',
       responsibilities: [
         'Spearheaded the implementation and integration of CRM and POS systems, improving operational efficiency by 15% and reducing service costs by 5%.',
         'Engineered custom reports and dashboards using SQL and Power BI to monitor and assess sales trends, leading to data-driven decision-making and improving productivity by 15%.',

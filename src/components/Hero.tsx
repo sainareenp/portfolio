@@ -97,7 +97,7 @@ const Hero: React.FC = () => {
 
             <div className="flex flex-wrap gap-4 animate-slide-up animate-delay-400">
               <a 
-                  href="https://drive.google.com/file/d/1XhnRjU_UVVpSnvlCAnVlwHrnCD6-GttH/view?usp=sharing" 
+                  href="https://drive.google.com/file/d/1ChyqPG_UnYRMDj9y1B8Ve4AHB3SOWKYX/view?usp=sharing" 
                   className="btn btn-primary" 
                   target="_blank" 
                   rel="noopener noreferrer"

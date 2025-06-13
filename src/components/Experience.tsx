@@ -37,9 +37,10 @@ const Experience: React.FC = () => {
       location: 'Albany, New York',
       period: 'May 2025 - Present',
       responsibilities: [
-        'Developed and maintained internal tools using Python, SQL, and Power BI, enhancing data management and reporting efficiency.',
-        'Automated data entry processes, reducing manual effort by 40% and improving data accuracy.',
-        'Collaborated with cross-functional teams to gather requirements and deliver tailored solutions.'
+        'Develop and maintain internal tools using SQL and Power BI to automate data processing, reporting, and operational dashboards.',
+        'Assist with CRM data entry, quality validation, and reporting by managing data accuracy within ITSM systems and supporting governance initiatives.',
+        'Utilize Microsoft 365, ITSM Self-Service Portal, and MDM tools for secure, efficient service management.',
+        'Assist with service reporting, implementing data quality checks and supporting governance initiatives for process improvement.'
       ]
     
     },
@@ -100,7 +101,7 @@ const Experience: React.FC = () => {
               
               <div className="pl-4">
                 <div className="card p-6">
-                  <h3 className="text-xl font-bold text-primary-700 dark:text-primary-300">
+                  <h3 className="text-xl font-bold text-primary-700 dark:text-accent-400">
                     {exp.title}
                   </h3>
                   <div className="text-secondary-600 dark:text-secondary-400 mt-1 mb-4">

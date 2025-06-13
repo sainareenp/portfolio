@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
             
             <a
               href="#hero"
-              className="p-2 rounded-full bg-primary-600 dark:bg-accent-400 text-white hover:bg-primary-700 dark:hover:bg-accent-500 transition-colors"
+              className="p-2 rounded-full bg-primary-600 dark:bg-teal-600 text-white hover:bg-primary-700 dark:hover:bg-accent-400 transition-colors"
               aria-label="Scroll to top"
             >
               <ArrowUp className="h-5 w-5" />

@@ -96,12 +96,17 @@ const Hero: React.FC = () => {
             </h2>
 
             <div className="flex flex-wrap gap-4 animate-slide-up animate-delay-400">
-              <a href="#" className="btn btn-primary">
-                View Resume
-              </a>
-              <a href="#projects" className="btn btn-outline">
-                View Projects
-              </a>
+              <a 
+                  href="https://drive.google.com/file/d/1XhnRjU_UVVpSnvlCAnVlwHrnCD6-GttH/view?usp=sharing" 
+                  className="btn btn-primary" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  View Resume
+                </a>
+                <a href="#projects" className="btn btn-outline">
+                  View Projects
+                </a>
             </div>
 
             <div className="flex space-x-4 pt-4 animate-slide-up animate-delay-500">

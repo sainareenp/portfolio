@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
       github: 'https://github.com/sainareenp/sai-nareen-portfolio',
     },
     {
-      title: 'ETL Pipeline',
+      title: 'Mini ETL Pipeline Project',
       description:
         'Designed and developed a lightweight ETL pipeline to simulate a real-world data flow. It extracts 1000 rows of fake sales data using Faker, transforms the data (date formatting, revenue calculations, categorization), loads it into a SQLite database, and outputs insights via Excel reports. Included sales trends, top products, and regional distribution.',
       technologies: ['Python', 'SQLite', 'Pandas', 'OpenPyXL'],
@@ -34,14 +34,14 @@ const Projects: React.FC = () => {
     },
       {
       title: 'Online Marketplace Web Application',
-      description: 'Developed an online marketplace platform with facial recognition, two-factor authentication, and AI-powered fraud detection, enhancing user trust and transaction security. Built responsive user interfaces using React and Next.js, implemented protected routes via middleware, and collaborated on backend APIs for task management and image uploads, improving system reliability and scalability.',
+      description: 'Developed an online marketplace platform with two-factor authentication, and AI-powered fraud detection, enhancing user trust and transaction security. Built responsive user interfaces using React and Next.js, implemented protected routes via middleware, and collaborated on backend APIs for task management and image uploads, improving system reliability and scalability.',
       technologies: ['Next.js', 'React', 'Node.js', 'Firebase'],
       image: 'https://miro.medium.com/max/1200/1*Grifgcst7t_E9eRsX0Myuw.png',
       github: 'https://github.com/sainareenp/onlinemarketplace'
     },
     {
       title: 'Automated Industrial Line Tracer Vehicle',
-      description: 'Developed a software-controlled autonomous vehicle with line tracing capabilities using Python for embedded systems, optimizing control processes and improving operational efficiency by 20%. Integrated a robotic arm to perform automated object manipulation tasks (picking and placing), and utilized Power BI for performance data visualization, enhancing precision and operational efficiency in industrial automation.',
+      description: 'Developed a software-controlled autonomous vehicle with line tracing capabilities using Python, optimizing control processes and improving operational efficiency by 20%. Integrated a robotic arm to perform automated object manipulation tasks (picking and placing), and utilized Power BI for performance data visualization, enhancing precision and operational efficiency in industrial automation.',
       technologies: ['Python', 'Power BI', 'Embedded systems'],
       image: 'https://img.freepik.com/premium-vector/electric-vehicles-production-line-isometric-illustration-with-automated-remote-controlled-robotic-arms-assembly-conveyor-system_1284-56880.jpg?w=996',
     },
@@ -66,10 +66,10 @@ const Projects: React.FC = () => {
             {projects.map((project, index) => (
               <button
                 key={index}
-                className={`w-full text-left p-4 rounded-xl backdrop-blur-md  bg-white/60  dark:bg-white/10 transition-all border 
+                className={`w-full text-left p-4 rounded-xl backdrop-blur-md  bg-white/60  dark:bg-white/10 transition-all border
                   ${
                     index === selectedIndex
-                      ? 'border-blue-500 font-semibold shadow-md text-primary-700 dark:text-accent-400'
+                      ? 'border-blue-500 dark:border-accent-700 font-semibold shadow-md text-primary-700 dark:text-accent-400'
                       : 'hover:bg-white/60 hover:dark:bg-white/20 border-transparent '
                   }`}
                 onClick={() => setSelectedIndex(index)}
@@ -88,7 +88,7 @@ const Projects: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="p-6 rounded-2xl backdrop-blur-xl bg-white/40 dark:bg-white/10 shadow-lg transition-all"
+                className="p-6 rounded-2xl backdrop-blur-xl bg-white/40 dark:bg-white/10 shadow-lg transition-all text-justify"
               >
                 <div className="overflow-hidden rounded-xl">
                   <img

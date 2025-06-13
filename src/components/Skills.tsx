@@ -1,144 +1,165 @@
-import React, { useEffect, useState } from 'react';
-import { Code, Database, Terminal, Cpu, BarChart, Link as Line, Layers, GitBranch } from 'lucide-react';
+import React from 'react';
+import {
+  Code, Database, Terminal, Cpu, BarChart, Layers, Link as Line, GitBranch
+} from 'lucide-react';
 
-interface SkillCategory {
-  name: string;
-  icon: React.ReactNode;
-  skills: string[];
-  color: string;
-}
+import {
+  SiPython, SiHtml5, SiCss3, SiMysql, SiJavascript,
+  SiPowers, SiTableau, SiAutodesk, SiGit, SiGithub, SiUnity
+} from 'react-icons/si';
+import { FaProjectDiagram, FaUserCog, FaTasks, FaLayerGroup, FaTools } from 'react-icons/fa';
 
-const Skills: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+// DATA: All skills and categories
+const skillCategories = [
+  {
+    name: 'Programming Languages',
+    icon: <Code className="h-6 w-6 text-primary-600" />,
+    skills: [
+      { name: 'Python', icon: <SiPython className="h-5 w-5 text-yellow-400" /> },
+      { name: 'SQL', icon: <Database className="h-5 w-5 text-brown-700" /> },
+      { name: 'HTML', icon: <SiHtml5 className="h-5 w-5 text-orange-500" /> },
+      { name: 'CSS', icon: <SiCss3 className="h-5 w-5 text-blue-500" /> },
+      { name: 'JavaScript', icon: <SiJavascript className="h-5 w-5 text-yellow-300" /> },
+    ]
+  },
+  {
+    name: 'Data Skills',
+    icon: <Database className="h-6 w-6 text-primary-600" />,
+    skills: [
+      { name: 'Data Modelling', icon: <FaLayerGroup className="h-5 w-5 text-blue-400" /> },
+      { name: 'ETL Processes', icon: <FaTasks className="h-5 w-5 text-green-500" /> },
+      { name: 'Database Management', icon: <Database className="h-5 w-5 text-purple-500" /> },
+      { name: 'Data Quality Validation', icon: <FaUserCog className="h-5 w-5 text-blue-500" /> },
+      { name: 'Data Governance Support', icon: <FaProjectDiagram className="h-5 w-5 text-indigo-500" /> }
+    ]
+  },
+  {
+    name: 'Tools & Databases',
+    icon: <Terminal className="h-6 w-6 text-primary-600" />,
+    skills: [
+      { name: 'Power BI', icon: <SiPowers className="h-5 w-5 text-yellow-500" /> },
+      { name: 'Tableau', icon: <SiTableau className="h-5 w-5 text-blue-500" /> },
+      { name: 'MySQL', icon: <SiMysql className="h-5 w-5 text-blue-700" /> },
+      { name: 'Microsoft Office 365', icon: <FaTools className="h-5 w-5 text-orange-500" /> },
+      { name: 'Git', icon: <SiGit className="h-5 w-5 text-red-500" /> },
+      { name: 'GitHub', icon: <SiGithub className="h-5 w-5 text-gray-900" /> },
+      { name: 'IT Service Management (ITSM)', icon: <FaTools className="h-5 w-5 text-gray-500" /> },
+      { name: 'AutoCAD', icon: <SiAutodesk className="h-5 w-5 text-blue-500" /> },
+      { name: 'CATIA', icon: <SiAutodesk className="h-5 w-5 text-blue-500" /> },
+      { name: 'Unity', icon: <SiUnity className="h-5 w-5 text-gray-900" /> },
+      { name: 'Meta Quest Developer Hub', icon: <FaTools className="h-5 w-5 text-indigo-500" /> }
+    ]
+  },
+  {
+    name: 'Enterprise Systems & Platforms',
+    icon: <GitBranch className="h-6 w-6 text-primary-600" />,
+    skills: [
+      { name: 'CRM Systems', icon: <FaUserCog className="h-5 w-5 text-blue-500" /> },
+      { name: 'POS Systems', icon: <FaTools className="h-5 w-5 text-gray-500" /> },
+      { name: 'Inventory Management Systems', icon: <FaLayerGroup className="h-5 w-5 text-indigo-400" /> },
+      { name: 'Process Automation Tools', icon: <FaTasks className="h-5 w-5 text-green-600" /> },
+      { name: 'Project Management Platforms', icon: <FaProjectDiagram className="h-5 w-5 text-purple-500" /> }
+    ]
+  }
+];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
+// ✅ Modified Proficiency array with icons stored as component references
+const proficiencies = [
+  { name: 'Programming', percentage: 85, icon: Cpu },
+  { name: 'Data Analysis', percentage: 90, icon: BarChart },
+  { name: 'Project Management', percentage: 80, icon: Layers },
+  { name: 'UI/UX Design', percentage: 75, icon: Line },
+  { name: 'Database Management', percentage: 85, icon: Database },
+  { name: 'Software Development', percentage: 80, icon: Code },
+]
 
-    const section = document.getElementById('skills');
-    if (section) observer.observe(section);
-
-    return () => {
-      if (section) observer.unobserve(section);
-    };
-  }, []);
-
-  const skillCategories: SkillCategory[] = [
-    {
-      name: 'Programming Languages',
-      icon: <Code className="h-6 w-6" />,
-      skills: ['C', 'Python', 'HTML', 'CSS', 'JavaScript', 'MySQL', 'SQL'],
-      color: 'from-blue-500 to-indigo-600',
-    },
-    {
-      name: 'Data Management',
-      icon: <Database className="h-6 w-6" />,
-      skills: ['Data Analytics', 'Database Management', 'Database Management Systems (DBMS)'],
-      color: 'from-emerald-500 to-teal-600',
-    },
-    {
-      name: 'Technical Tools',
-      icon: <Terminal className="h-6 w-6" />,
-      skills: ['Microsoft Office Suite', 'Power BI', 'Tableau', 'AutoCAD', 'CATIA', 'Unity', 'Meta Quest Developer Hub'],
-      color: 'from-purple-500 to-fuchsia-600',
-    },
-    {
-      name: 'Project Management',
-      icon: <GitBranch className="h-6 w-6" />,
-      skills: ['Process Automation', 'Project Management', 'Inventory Management Systems', 'CRM systems', 'POS systems'],
-      color: 'from-amber-500 to-orange-600',
-    },
-  ];
-
+// Main reusable component
+const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-white dark:bg-secondary-950 overflow-hidden">
-      <div className="section-container">
-        <h2 className="section-title mb-16">Skills & Expertise</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skillCategories.map((category, index) => (
-            <div 
-              key={category.name}
-              className={`card p-6 transform transition-all duration-500 ${
-                isVisible 
-                  ? 'translate-y-0 opacity-100' 
-                  : 'translate-y-10 opacity-0'
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <div className={`p-3 rounded-xl mb-4 bg-gradient-to-r ${category.color} w-fit text-white`}>
-                {category.icon}
-              </div>
-              
-              <h3 className="text-xl font-semibold mb-4">{category.name}</h3>
-              
-              <ul className="space-y-2">
-                {category.skills.map((skill) => (
-                  <li key={skill} className="flex items-center">
-                    <div className="w-2 h-2 rounded-full bg-primary-500 dark:bg-accent-400 mr-2"></div>
-                    <span className="text-secondary-700 dark:text-secondary-300">{skill}</span>
-                  </li>
-                ))}
-              </ul>
+    <section id="skills" className="py-20 bg-white dark:bg-gray-900">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="section-title mb-10 text-4xl font-bold text-center">Skills & Expertise</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
+          {skillCategories.map((category) => (
+            <div key={category.name} className="p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md">
+              <SkillCategoryBlock category={category} />
             </div>
           ))}
         </div>
-        
-        <div className="mt-16">
-          <h3 className="text-2xl font-semibold text-center mb-8">Technical Proficiency</h3>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { name: 'Programming', percentage: 85, icon: <Cpu className="h-5 w-5" /> },
-              { name: 'Data Analysis', percentage: 90, icon: <BarChart className="h-5 w-5" /> },
-              { name: 'Project Management', percentage: 80, icon: <Layers className="h-5 w-5" /> },
-              { name: 'UI/UX Design', percentage: 75, icon: <Line className="h-5 w-5" /> },
-              { name: 'Database Management', percentage: 85, icon: <Database className="h-5 w-5" /> },
-              { name: 'Software Development', percentage: 80, icon: <Code className="h-5 w-5" /> },
-            ].map((skill, index) => (
-              <div 
-                key={skill.name} 
-                className={`p-4 bg-secondary-50 dark:bg-secondary-900 rounded-lg transition-all duration-500 ${
-                  isVisible 
-                    ? 'translate-x-0 opacity-100' 
-                    : index % 2 === 0 ? 'translate-x-10 opacity-0' : '-translate-x-10 opacity-0'
-                }`}
-                style={{ transitionDelay: `${(index + 4) * 100}ms` }}
-              >
-                <div className="flex justify-between items-center mb-2">
-                  <div className="flex items-center">
-                    <div className="mr-2 text-primary-600 dark:text-accent-400">
-                      {skill.icon}
-                    </div>
-                    <span className="font-medium">{skill.name}</span>
-                  </div>
-                  <span className="text-sm font-medium text-primary-600 dark:text-accent-400">
-                    {skill.percentage}%
-                  </span>
-                </div>
-                
-                <div className="w-full bg-secondary-200 dark:bg-secondary-700 rounded-full h-2.5">
-                  <div 
-                    className="bg-gradient-to-r from-primary-500 to-primary-600 dark:from-accent-500 dark:to-accent-400 h-2.5 rounded-full"
-                    style={{ 
-                      width: isVisible ? `${skill.percentage}%` : '0%',
-                      transition: 'width 1s ease-in-out',
-                      transitionDelay: `${(index + 4) * 100 + 300}ms`
-                    }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
+
+        <h3 className="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-white">
+          Technical Proficiency
+        </h3>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {proficiencies.map((skill) => (
+            <ProficiencyBlock key={skill.name} skill={skill} />
+          ))}
         </div>
       </div>
     </section>
+  );
+};
+
+// Skill Category Block
+type Skill = {
+  name: string;
+  icon: React.ReactNode;
+};
+
+type SkillCategory = {
+  name: string;
+  icon: React.ReactNode;
+  skills: Skill[];
+};
+
+const SkillCategoryBlock = ({ category }: { category: SkillCategory }) => (
+  <div>
+    <div className="flex items-center mb-4">
+      {category.icon}
+      <h3 className="text-2xl font-semibold text-gray-900 dark:text-white ml-3">{category.name}</h3>
+    </div>
+    <ul className="grid grid-cols-2 gap-3 text-gray-700 dark:text-gray-300 text-base">
+      {category.skills.map((skill) => (
+        <li key={skill.name} className="flex items-center gap-3">
+          {skill.icon} {skill.name}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
+// ✅ Proficiency Block updated fully for dynamic dark/light mode
+type Proficiency = {
+  name: string;
+  percentage: number;
+  icon: any;
+};
+
+const ProficiencyBlock = ({ skill }: { skill: Proficiency }) => {
+  const Icon = skill.icon;
+
+  return (
+    <div className="p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
+      <div className="flex justify-between items-center mb-4">
+        <div className="flex items-center gap-2">
+          <div className="text-primary-600 dark:text-accent-400">
+            <Icon className="h-5 w-5" />
+          </div>
+          <span className="font-medium">{skill.name}</span>
+        </div>
+        <span className="text-sm font-medium text-primary-600 dark:text-accent-400">
+          {skill.percentage}%
+        </span>
+      </div>
+      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+        <div
+          className="bg-gradient-to-r from-primary-500 to-primary-600 dark:from-accent-500 dark:to-accent-400 h-2.5 rounded-full"
+          style={{ width: `${skill.percentage}%` }}
+        ></div>
+      </div>
+    </div>
   );
 };
 

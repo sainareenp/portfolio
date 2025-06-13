@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
             
             <div className="space-y-4">
               <div className="flex items-start">
-                <div className="p-3 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-300 mr-4">
+                <div className="p-3 rounded-full bg-primary-100 dark:bg-teal-500 text-primary-600 dark:text-gray-100 mr-4">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="p-3 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-300 mr-4">
+                <div className="p-3 rounded-full bg-primary-100 dark:bg-teal-500 text-primary-600 dark:text-gray-100 mr-4">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="p-3 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-300 mr-4">
+                <div className="p-3 rounded-full bg-primary-100 dark:bg-teal-500 text-primary-600 dark:text-gray-100 mr-4">
                   <Linkedin className="h-5 w-5" />
                 </div>
                 <div>
@@ -103,7 +103,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="p-3 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-300 mr-4">
+                <div className="p-3 rounded-full bg-primary-100 dark:bg-teal-500 text-primary-600 dark:text-gray-100 mr-4">
                   <Github className="h-5 w-5" />
                 </div>
                 <div>
@@ -132,7 +132,7 @@ const Contact: React.FC = () => {
             
             <form onSubmit={handleSubmit} className="space-y-4 ">
                 <div >
-                <label htmlFor="name" className="block text-sm font-medium text-secondary-700 dark:text-secondary-300 mb-1">
+                <label htmlFor="name" className="block text-sm font-semibold text-secondary-700 font-semibold dark:text-secondary-300 mb-1">
                   Your Name
                 </label>
                 <input
@@ -147,7 +147,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-secondary-700 dark:text-secondary-300 mb-1">
+                <label htmlFor="email" className="block text-sm font-semibold text-secondary-700 font-semibold dark:text-secondary-300 mb-1">
                   Email Address
                 </label>
                 <input
@@ -161,7 +161,7 @@ const Contact: React.FC = () => {
                 />
               </div>
                <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-secondary-700 dark:text-secondary-300 mb-1">
+                <label htmlFor="subject" className="block text-sm font-semibold text-secondary-700 font-semibold dark:text-secondary-300 mb-1">
                   Subject
                 </label>
                 <textarea
@@ -175,7 +175,7 @@ const Contact: React.FC = () => {
                 ></textarea>
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-secondary-700 dark:text-secondary-300 mb-1">
+                <label htmlFor="message" className="block text-sm font-semibold text-secondary-700 font-semibold dark:text-secondary-300 mb-1">
                   Message
                 </label>
                 <textarea

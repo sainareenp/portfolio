@@ -14,15 +14,7 @@ interface Project {
 
 const Projects: React.FC = () => {
   const projects: Omit<Project, 'period'>[] = [
-     {
-      title: 'Portfolio Website',
-      description:
-        'Built a modern personal portfolio with React and Next.js showcasing featured projects and contact integrations. Integrated smooth animations, responsive design, dark mode, and optimized performance for SEO and accessibility.',
-      technologies: ['Next.js', 'React', 'Tailwind CSS'],
-      image:
-        'https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      github: 'https://github.com/sainareenp/sai-nareen-portfolio',
-    },
+  
     {
       title: 'Mini ETL Pipeline Project',
       description:

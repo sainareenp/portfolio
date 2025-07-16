@@ -119,6 +119,23 @@ export default function Education() {
               <div>
                 <h4 className="text-lg font-bold text-white dark:text-white" style={{ display: 'flex', alignItems: 'center' }}>
                   <Award className="mr-2 " size={18} />
+                 Excel: Managing and Analyzing Data
+                </h4>
+              
+                <a
+                  href="https://drive.google.com/file/d/1boOpb8gFL_9IH1HJoMHecaz4180BEjpF/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-sky-200 mx-7 font-semibold dark:text-amber-200 flex items-center gap-1 mt-1 hover:underline"
+                >
+                  <ExternalLink size={14} /> View Certificate
+                </a>
+              </div>
+              
+              {/* Certificate 2 */}
+              <div>
+                <h4 className="text-lg font-bold text-white dark:text-white" style={{ display: 'flex', alignItems: 'center' }}>
+                  <Award className="mr-2 " size={18} />
                  Python fo Machine learning & Data Science Masterclass
                 </h4>
               
@@ -132,7 +149,7 @@ export default function Education() {
                 </a>
               </div>
 
-              {/* Certificate 2 */}
+              {/* Certificate 3 */}
              <div>
                 <h4 className="text-lg font-bold text-white dark:text-white" style={{ display: 'flex', alignItems: 'center' }}>
                   <Award className="mr-2 " size={18} />
@@ -149,7 +166,7 @@ export default function Education() {
                 </a>
               </div>
 
-              {/* Certificate 3 */}
+              {/* Certificate 4 */}
               <div>
                 <h4 className="text-lg font-bold text-white dark:text-white" style={{ display: 'flex', alignItems: 'center' }}>
                   <Award className="mr-2 " size={18} />

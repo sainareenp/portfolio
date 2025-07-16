@@ -66,11 +66,24 @@ const Experience: React.FC = () => {
         'Collaborated effectively with interdisciplinary teams to bridge UX research and VR development.'
       ]
     },
+      {
+      title: 'CRM & Data Analyst',
+      company: 'Global Vision Consultancy',
+      location: 'Hyderabad, India',
+      period: 'June 2022 - Dec 2023',
+      responsibilities: [
+        'Maintained accurate student records in CRM by uploading academic documents, service usage, and university application data.',
+        'Tracked application lifecycles across international universities, improving admissions follow-up and reducing response delays.',
+        'Built interactive dashboards using Excel and Power BI to analyze service trends, application volumes, and conversion metrics.',
+        'Automated data reports to inform monthly performance reviews, cutting manual processing time by 30%.',
+        'Delivered actionable insights to leadership, contributing to improved operational planning and service delivery.'
+      ]
+    },
     {
       title: 'Assistant General Manager',
       company: 'Sree Krishna Vilas',
       location: 'Hyderabad, India',
-      period: 'May 2021 – Dec 2023',
+      period: 'May 2021 – Apr 2022',
       responsibilities: [
         'Spearheaded the implementation and integration of CRM and POS systems, improving operational efficiency by 15% and reducing service costs by 5%.',
         'Engineered custom reports and dashboards using SQL and Power BI to monitor and assess sales trends, leading to data-driven decision-making and improving productivity by 15%.',

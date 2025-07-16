@@ -9,11 +9,11 @@ const About: React.FC = () => {
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">    
-            <p className="text-lg text-secondary-700 dark:text-secondary-300 leading-relaxed text-justify">
+            <p className="text-lg text-secondary-700 dark:text-secondary-300 leading-relaxed text-left">
               I am an emerging data professional with over 4 years of experience in data analytics, business intelligence, and IT operations across public, academic, and business environments. I have a strong foundation in SQL, Python, Power BI, Tableau, and data workflows, and I am currently pursuing a Master’s in Information Science at the University at Albany, SUNY, with a focus on Information Management and Technology.
             </p>
             
-            <p className="text-lg text-secondary-700 dark:text-secondary-300 leading-relaxed text-justify">
+            <p className="text-lg text-secondary-700 dark:text-secondary-300 leading-relaxed text-left">
               My background includes supporting public sector data operations at NYS ITS, contributing to immersive technology research with user-centered design components, and managing data-driven business operations. I am passionate about using data and technology to inform decisions, improve systems, and deliver meaningful, user-centered outcomes.
             </p>
             
